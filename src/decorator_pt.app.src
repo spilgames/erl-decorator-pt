@@ -1,4 +1,4 @@
-{application, erl_decorator_pt,
+{application, decorator_pt,
  [
   {description, "Chain of decorators allowed in parse transforms"},
   {vsn, git},

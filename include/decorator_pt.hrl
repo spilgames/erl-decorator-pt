@@ -5,7 +5,7 @@
 
 -ifdef(NO_PARSE_TRANSFORM).
 -else.
--compile({parse_transform, pt_transform}).
+-compile({parse_transform, decorator_pt_fun}).
 -endif.
 
 -endif. % __PT_TRANSFORM_HRL

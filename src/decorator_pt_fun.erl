@@ -1,9 +1,9 @@
--module(pt_transform).
+-module(decorator_pt_fun).
 -export([parse_transform/2]).
 
 %trick to include parse_transform, without transforming this particular module!
 -define(NO_PARSE_TRANSFORM, true).
--include("transform.hrl").
+-include("decorator_pt.hrl").
 
 %% @doc Start the parse transformation
 %%      http://erlang.org/doc/man/erl_syntax.html

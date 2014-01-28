@@ -1,4 +1,4 @@
--module(pt_decorator).
+-module(decorator_pt_core).
 
 % adapted from: http://niki.code-karma.com/2011/06/python-style-decorators-in-erlang/
 % changes:
@@ -6,7 +6,6 @@
 %   - wrap it in a macro (because bit ugly to use -decorate() direcly)
 
 -export([parse_transform/2, pretty_print/1]).
-
 
 %%--------------------------------------------------------------------
 %% @doc Function gets called as a Parse Tranformation kickstarter
