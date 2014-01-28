@@ -1,0 +1,11 @@
+{application, erl_decorator_pt,
+ [
+  {description, "Chain of decorators allowed in parse transforms"},
+  {vsn, git},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []}
+ ]}.
