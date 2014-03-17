@@ -22,7 +22,6 @@ parse_transform(Ast,_Options)->
     %io:format("~p~n<<<<~n",[Ast2]),
     %io:format("~s~n>>>>~n",[pretty_print(Ast2)]),
     Ast2.
-    %Ast.
 
 %%--------------------------------------------------------------------
 %% @doc Helper to pretty_print an AST.
@@ -59,8 +58,8 @@ transform_node(Node, DecoratorList) ->
     {Node, DecoratorList}.
 
 apply_decorators(Node={function, Line, FuncName, Arity, Clauses}, DecoratorList) when length(DecoratorList) > 0 ->
-    %io:format("Decorating: ~p~n",[Node]),
-    [{clause,_, _Args,_, _}] = Clauses,
+    % Functions can have multiple function clauses (eg when using guards)
+    [{clause,_, _Args,_, _}|_] = Clauses,
 
     [
         % output the original function renamed
@@ -78,7 +77,7 @@ function_form_original({function, Line, FuncName, Arity, Clauses}) ->
 
 % outputs a single clause function that gets the first decorator chain function and calls it
 function_form_trampoline({function, Line, FuncName, Arity, Clauses}, DecoratorList) ->
-    [{clause,_, _Args,_, _}] = Clauses,
+    [{clause,_, _Args,_, _}|_] = Clauses,
     NumDecorators = length(DecoratorList),
     ArgNames = arg_names(Arity),
     { function, Line, FuncName, Arity, [{
