@@ -4,7 +4,7 @@ before_install:
   - wget https://raw.github.com/wiki/rebar/rebar/rebar
   - chmod +x rebar
 
-script: "make get-deps compile test docs"
+script: "make get-deps compile test"
 
 otp_release:
   - 22.0

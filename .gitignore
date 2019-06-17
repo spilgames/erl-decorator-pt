@@ -2,5 +2,6 @@
 ebin/
 deps/
 .dialyzer_plt
+.rebar
 erl_crash.dump
 *.beam
