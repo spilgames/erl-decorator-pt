@@ -1,3 +1,12 @@
+<a href="https://travis-ci.org/alertlogic/erl-decorator-pt" target="_blank"><img src="https://travis-ci.org/alertlogic/erl-decorator-pt.svg?branch=master"/></a>
+
+# erl-decorator-pt
+
+Transformations in Erlang syntax allowing cache decorator directives above functions to cache them
+using [erl-cache](https://github.com/alertlogic/erl-cache).
+
+This is a fork of [spilgames/erl-decorator-pt](https://github.com/spilgames/erl-decorator-pt) for [Alert Logic](https://github.com/alertlogic).
+
 Purpose
 =======
 
@@ -17,7 +26,7 @@ There are many ways to include these macros in your projects. Just remember macr
 debugging in particular are not the simplest tools in the world. _A great power comes with a great
 responsibility._
 
-The most common way of using this applocation is:
+The most common way of using this application is:
 
 1. Make it available to your application via rebar
 

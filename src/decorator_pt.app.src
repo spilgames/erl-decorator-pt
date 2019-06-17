@@ -7,5 +7,7 @@
                   kernel,
                   stdlib
                  ]},
-  {env, []}
+  {env, []},
+  {licenses, ["Apache 2"]},
+  {links, [{"Github", "https://github.com/alertlogic/erl-decorator-pt"}]}
  ]}.
